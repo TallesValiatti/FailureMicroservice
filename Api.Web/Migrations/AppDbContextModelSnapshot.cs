@@ -30,9 +30,7 @@ namespace FailureMicroservice.Web.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 7, 13, 12, 45, 13, 356, DateTimeKind.Utc).AddTicks(1951));
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 

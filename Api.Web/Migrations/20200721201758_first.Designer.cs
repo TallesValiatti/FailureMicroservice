@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FailureMicroservice.Web.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20200713124513_first")]
+    [Migration("20200721201758_first")]
     partial class first
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,9 +32,7 @@ namespace FailureMicroservice.Web.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 7, 13, 12, 45, 13, 356, DateTimeKind.Utc).AddTicks(1951));
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 

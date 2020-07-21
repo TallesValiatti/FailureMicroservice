@@ -36,7 +36,8 @@ namespace Api.Core.Tasks.Commands.Failure.Handlers
                 //insert the entity on the database
                 await _failureRepository.AddAsync(new Api.Core.Entities.Failure.Failure
                 {
-                    Body = JsonConvert.SerializeObject(command.Exception)
+                    Body = JsonConvert.SerializeObject(command.Exception),
+                    CreateAt = DateTime.UtcNow
                 });
                 
                 return await Task.FromResult(result);

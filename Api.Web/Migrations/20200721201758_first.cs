@@ -13,7 +13,7 @@ namespace FailureMicroservice.Web.Migrations
                 {
                     Id = table.Column<Guid>(nullable: false),
                     Body = table.Column<string>(nullable: false),
-                    CreateAt = table.Column<DateTime>(nullable: false, defaultValue: new DateTime(2020, 7, 13, 12, 45, 13, 356, DateTimeKind.Utc).AddTicks(1951))
+                    CreateAt = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {

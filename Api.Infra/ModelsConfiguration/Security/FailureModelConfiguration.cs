@@ -25,8 +25,7 @@ namespace Api.Infra.ModelsConfiguration
                 .IsRequired();
 
             builder.Property(x => x.CreateAt)
-              .IsRequired()
-              .HasDefaultValue(DateTime.UtcNow);
+              .IsRequired();
         }
     }
 }
